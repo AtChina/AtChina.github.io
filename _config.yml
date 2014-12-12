@@ -1,5 +1,0 @@
-markdown: kramdown
-pygments: true
-paginate: 8
-permalink: /:title
-encoding: "utf-8"
