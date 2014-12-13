@@ -10,7 +10,21 @@ url: "http://atchina.github.io" # the base hostname & protocol for your site
 github_username:  AtChina
 permalink: /:title
 production_url : http://atchina.github.io
+paginate: 5
+paginate_path: "page:num"
 
 # Build settings
 markdown: kramdown
 highlighter: pygments
+
+# defaults settings
+defaults:
+  -
+    scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "post"
+      author: "Nick"
+      categories: "UnDefined"
+
