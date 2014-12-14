@@ -26,6 +26,7 @@ defaults:
     values:
       layout: "post"
       author: "Nick"
+      comments: true
   -
     scope:
       path: "业务知识"
