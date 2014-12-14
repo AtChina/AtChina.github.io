@@ -26,37 +26,39 @@ layout: default
 </div>
 {% endfor %}
 <!-- Pagination links -->
-{% if paginator.total_pages > 1 %}
-<nav>
-	<ul class="pager">
-		{% if paginator.previous_page %}
-		<li>
-			<a href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}">上一页</a>
-			{% else %}
-			<span>上一页</span>
-		</li>
-		{% endif %}
+<div class="row">
+	{% if paginator.total_pages > 1 %}
+	<nav class="navbar navbar-default navbar-fixed-bottom">
+		<ul class="pager">
+			{% if paginator.previous_page %}
+			<li>
+				<a href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}">上一页</a>
+				{% else %}
+				<span>上一页</span>
+			</li>
+			{% endif %}
 						
                         {% for page in (1..paginator.total_pages) %}
     						{% if page == paginator.page %} <em>{{ page }}</em>
-		{% elsif page == 1 %}
-		<li>
-			<a href="{{ '/index.html' | prepend: site.baseurl | replace: '//', '/' }}">{{ page }}</a>
-		</li>
-		{% else %}
-		<li>
-			<a href="{{ site.paginate_path | prepend: site.baseurl | replace: '//', '/' | replace: ':num', page }}">{{ page }}</a>
-		</li>
-		{% endif %}
+			{% elsif page == 1 %}
+			<li>
+				<a href="{{ '/index.html' | prepend: site.baseurl | replace: '//', '/' }}">{{ page }}</a>
+			</li>
+			{% else %}
+			<li>
+				<a href="{{ site.paginate_path | prepend: site.baseurl | replace: '//', '/' | replace: ':num', page }}">{{ page }}</a>
+			</li>
+			{% endif %}
   						{% endfor %}
 
   						{% if paginator.next_page %}
-		<li>
-			<a href="{{ paginator.next_page_path | prepend: site.baseurl | replace: '//', '/' }}">下一页</a>
-		</li>
-		{% else %}
-		<span>下一页</span>
-		{% endif %}
-	</ul>
-</nav>
-{% endif %}
+			<li>
+				<a href="{{ paginator.next_page_path | prepend: site.baseurl | replace: '//', '/' }}">下一页</a>
+			</li>
+			{% else %}
+			<span>下一页</span>
+			{% endif %}
+		</ul>
+	</nav>
+	{% endif %}
+</div>

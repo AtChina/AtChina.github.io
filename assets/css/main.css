@@ -1,0 +1,18 @@
+@charset "utf-8";
+/**
+ * IE and chrome
+ */
+.page-container {
+  /*margin-top: 30px;  */
+  margin-top: 43px !important;
+}
+
+/** 
+ * firfox
+ */
+@-moz-document url-prefix() { 
+  .page-container {
+    /*margin-top: 30px;  */
+    margin-top: 44px !important;
+  }
+}
