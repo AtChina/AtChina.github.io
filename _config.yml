@@ -29,6 +29,16 @@ defaults:
       comments: true
   -
     scope:
+      path: "生活随笔"
+    values:
+      categories: "生活随笔"
+  -
+    scope:
+      path: "软件圈子"
+    values:
+      categories: "软件圈子"       
+  -
+    scope:
       path: "业务知识"
     values:
       categories: "业务知识"
@@ -46,14 +56,4 @@ defaults:
     scope:
       path: "框架工具"
     values:
-      categories: "框架工具"      
-  -
-    scope:
-      path: "读书笔记"
-    values:
-      categories: "读书笔记"
-  -
-    scope:
-      path: "软件圈子"
-    values:
-      categories: "软件圈子"      
+      categories: "框架工具"     
