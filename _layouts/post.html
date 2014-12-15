@@ -22,7 +22,8 @@ layout: default
         /* * * DON'T EDIT BELOW THIS LINE * * */
         (function() {
             var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
-            dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+            // dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+            dsq.src="{{ "/assets/bower_components/javascript/a.disquscdn.com.embed.js" | prepend: site.baseurl }}";//使用disqus本地库
             (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
         })();
     </script>
