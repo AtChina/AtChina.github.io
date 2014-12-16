@@ -18,7 +18,8 @@ paginate_path: "page:num"
 gems: ['jekyll-lunr-js-search']
 lunr_search:
   excludes: [rss.xml, atom.xml]
-
+  js_dir: "javascript"
+  
 #comments settings
 comments :
   provider : duoshuo
