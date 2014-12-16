@@ -1,3 +1,10 @@
+---
+layout: page
+permalink: /search/
+---
+<script src="{{ "/assets/javascript/lunr.min.js" | prepend: site.baseurl }}" type="text/javascript" charset="utf-8"></script>
+<script src="{{ "/assets/javascript/search.min.js" | prepend: site.baseurl }}" type="text/javascript" charset="utf-8"></script>
+<script src="{{ "/assets/javascript/jquery.lunr.search.js" | prepend: site.baseurl }}" type="text/javascript" charset="utf-8"></script>
 <div id="search">
 	<form action="/search" method="get">
 		<input type="text" id="search-query" name="q" placeholder="Search" autocomplete="off"></form>
