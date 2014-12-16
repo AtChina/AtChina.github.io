@@ -18,6 +18,12 @@ paginate_path: "page:num"
 markdown: kramdown
 highlighter: pygments
 
+#comments settings
+comments :
+  provider : duoshuo
+  duoshuo : 
+    short_name : atchina
+
 # defaults settings
 defaults:
   -
