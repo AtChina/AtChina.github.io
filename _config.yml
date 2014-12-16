@@ -14,15 +14,20 @@ production_url : http://atchina.github.io
 paginate: 5
 paginate_path: "page:num"
 
-# Build settings
-markdown: kramdown
-highlighter: pygments
+#plugin settings
+gems: ['jekyll-lunr-js-search']
+lunr_search:
+  excludes: [rss.xml, atom.xml]
 
 #comments settings
 comments :
   provider : duoshuo
   duoshuo : 
     short_name : atchina
+
+# Build settings
+markdown: kramdown
+highlighter: pygments
 
 # defaults settings
 defaults:
