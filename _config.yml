@@ -63,10 +63,4 @@ defaults:
     scope:
       path: "框架工具"
     values:
-      categories: "框架工具"
-  -
-    scope:
-      path: "TEST"
-    values:
-      layout: ""
-      categories: "TEST"      
+      categories: "框架工具"     
