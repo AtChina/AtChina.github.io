@@ -13,12 +13,6 @@ permalink: /:categories/:title
 production_url : http://atchina.github.io
 paginate: 5
 paginate_path: "page:num"
-
-#plugin settings
-gems: ['jekyll-lunr-js-search']
-lunr_search:
-  excludes: [rss.xml, atom.xml]
-  js_dir: "assets/javascript"
   
 #comments settings
 comments :
