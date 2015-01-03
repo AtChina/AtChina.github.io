@@ -74,4 +74,5 @@ defaults:
     scope:
       path: "TEST"
     values:
+      layout: ""
       categories: "TEST"      
