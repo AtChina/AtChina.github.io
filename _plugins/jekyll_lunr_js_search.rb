@@ -20,11 +20,11 @@ module Jekyll
             'tags' => 20,
             'body' => 1
           },
-          'js_dir' => 'js'
+          'js_dir' => 'assets/javascript'
         }.merge!(config['lunr_search'] || {})
 
         @js_dir = lunr_config['js_dir']
-        gem_lunr = File.join(__dir__, "../../build/lunr.min.js")
+        gem_lunr = File.join(__dir__, "assets/javascript/lunr.min.js")
         @lunr_path = File.exist?(gem_lunr) ? gem_lunr : File.join(@js_dir, File.basename(gem_lunr))
         raise "Could not find #{@lunr_path}" if !File.exist?(@lunr_path)
 

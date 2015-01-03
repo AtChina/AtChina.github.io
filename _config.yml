@@ -18,7 +18,7 @@ paginate_path: "page:num"
 gems: ['jekyll-lunr-js-search']
 lunr_search:
   excludes: [rss.xml, atom.xml]
-  js_dir: "javascript"
+  js_dir: "assets/javascript"
   
 #comments settings
 comments :
@@ -70,3 +70,9 @@ defaults:
       path: "框架工具"
     values:
       categories: "框架工具"
+  -
+    scope:
+      path: "TEST"
+    values:
+      layout: ""
+      categories: "TEST"      
