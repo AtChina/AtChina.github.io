@@ -1,20 +1,64 @@
 ---
-layout: index
+layout: default
 ---
-<div class="row">
-  <img src="{{ "/nick.png" | prepend: site.baseurl }}" 
-       alt="..." 
-       class="img-responsive img-thumbnail img-circle" />
-</div>
-<div class="row">
-  <h1>About Me</h1>
-  <h3>My name is Nick,A senior software development engineer</h3>
+<!-- Posts List -->
+{% for post in paginator.posts %}
+<div class="col-xs-12">
+  <h3>
+    <a  href="{{ post.url | prepend: site.baseurl }}">
+      <span>{{ post.title }}</span>
+    </a>
+  </h3>
   <blockquote>
-    <p>I'm from China,Now I work in a software company in Guangzhou</p>
-    <p>This is my blog that record me how to explore the world</p>
-    <footer>Share only to make the world a better place</footer>
+    <p>{{ post.content | strip_html | truncate: 100 }}</p>
+    <footer>
+      <span>{{ post.categories }}</span>
+    </footer> <abbr title="{{ post.title }}" class="initialism"><a  href="{{ post.url | prepend: site.baseurl }}">
+        <span class="label label-info">阅读全文</span>
+      </a></abbr> 
+
   </blockquote>
-  <a href="/" class="button button-glow button-border button-action button-rounded button-primary"> <i class="fa fa-thumbs-up"></i>
-    Visit Blog
-  </a>
+  <p class="text-right"></p>
+  <blockquote class="blockquote-reverse">
+    <footer>{{ post.date |date:'%Y-%m-%d'}}</footer>
+    <cite>By Nick</cite>
+  </blockquote>
+</div>
+{% endfor %}
+<!-- Pagination links -->
+<div class="row">
+  {% if paginator.total_pages > 1 %}
+  <nav class="navbar navbar-default navbar-fixed-bottom">
+    <ul class="pager">
+      {% if paginator.previous_page %}
+      <li>
+        <a href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}">上一页</a>
+        {% else %}
+        <span>上一页</span>
+      </li>
+      {% endif %}
+            
+      {% for page in (1..paginator.total_pages) %}
+      {% if page == paginator.page %} <em>{{ page }}</em>
+      {% elsif page == 1 %}
+      <li>
+        <a href="{{ '/index.html' | prepend: site.baseurl | replace: '//', '/' }}">{{ page }}</a>
+      </li>
+      {% else %}
+      <li>
+        <a href="{{ site.paginate_path | prepend: site.baseurl | replace: '//', '/' | replace: ':num', page }}">{{ page }}</a>
+      </li>
+      {% endif %}
+      {% endfor %}
+
+      {% if paginator.next_page %}
+      <li>
+        <a href="{{ paginator.next_page_path | prepend: site.baseurl | replace: '//', '/' }}">下一页</a>
+      </li>
+      {% else %}
+      <span>下一页</span>
+      {% endif %}
+    </ul>
+  </nav>
+  {% endif %}
 </div>
