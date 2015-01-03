@@ -13,7 +13,7 @@ permalink: /:categories/:title
 production_url : http://atchina.github.io
 paginate: 5
 paginate_path: "page:num"
-  
+
 #comments settings
 comments :
   provider : duoshuo
