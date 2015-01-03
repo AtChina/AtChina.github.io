@@ -5,7 +5,8 @@
 	{% include header.html %}
 	<div class="container-fluid page-container">
 		<div class="row wrap">
-			<div class="col-sm-12">
+			<div class="col-sm-1"></div>
+			<div class="col-sm-10">
 				<div class="row">
 					<div class="post">
 						<header class="post-header">
@@ -21,7 +22,8 @@
 					<!--comments-->
 					{% if page.comments %}
 					<!-- 多说评论框 start -->
-					<div class="ds-thread" data-thread-key="{{ page.id }}" data-title="{{ page.title }}" data-url="{{ page.url }}"></div>
+					<div class="ds-thread" data-thread-key="{{ page.id }}" data-title="{{ page.title }}" data-url="{{ page.url }}">						
+					</div>
 					<!-- 多说评论框 end -->
 					<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
 					<script type="text/javascript">
@@ -38,6 +40,7 @@
 					<!-- 多说公共JS代码 end -->{% endif %}
 				</div>
 			</div>
+			<div class="col-sm-1"></div>
 		</div>
 	</div>
 	{% include footer.html %}
