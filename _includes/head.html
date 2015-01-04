@@ -6,7 +6,7 @@
 <meta name="viewport" content="width=device-width initial-scale=1">
 <meta name="description" content="{% if page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description }}{% endif %}">
 <!--bing the title of page-->
-<title>{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}</title>
+<title>{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}</title> 
 <!--put the css files in here-->
 <script src="/assets/javascript/nav.js" type="text/javascript" charset="utf-8"></script>
 <link rel="shortcut icon" href="/favicon.ico" />
@@ -15,4 +15,5 @@
 <link rel="stylesheet" href="/assets/css/main.css">
 <link rel="stylesheet" href="/assets/bower_components/Buttons/css/buttons.css">
 <link rel="stylesheet" href="/assets/bower_components/font-awesome/css/font-awesome.css">
+<script src="/assets/bower_components/jquery/jquery.min.js" type="text/javascript" charset="utf-8"></script>
 </head>
