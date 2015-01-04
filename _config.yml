@@ -2,23 +2,20 @@
 title: Nick's Blog
 author: Nick
 email: weichangying@msn.com
-description: > # this means to ignore newlines until "baseurl:"
-  Write an awesome description for your new site here. You can edit this
-  line in _config.yml. It will appear in your document head meta (for
-  Google search results) and in your feed.xml site description.
+description: "Share only to make the world a better place"
 baseurl: "/"
-url: ""
-github_username:  AtChina
-permalink: /:categories/:title
-production_url : http://atchina.me/
+url: "http://atchina.me/"
+github_username: AtChina
+permalink: "/:categories/:title"
+production_url: "http://atchina.me/"
 paginate: 5
 paginate_path: "page:num"
 
 #comments settings
-comments :
-  provider : duoshuo
-  duoshuo : 
-    short_name : atchina
+comments:
+  provider: duoshuo
+  duoshuo: 
+    short_name: atchina
 
 # Build settings
 markdown: kramdown
