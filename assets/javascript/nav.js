@@ -5,7 +5,7 @@ if (document.location.href === "http://atchina.me/" || document.location.href ==
 }
 //Disabled Copy
 window.onload = function() {
-	document.body.onmouseup = document.selection.empty();
+	document.body.onmouseup =function(){ document.selection.empty();}
 	document.body.oncontextmenu = "return false";
 	document.body.onselectstart = "return false";
 	document.body.ondragstart = "return false";
